@@ -2,9 +2,9 @@
 
 An interactive Streamlit dashboard for exploring water-quality data collected by an autonomous surface vehicle in Biscayne Bay, Miami.
 
-**Live app:** https://YOUR-APP-NAME.streamlit.app  <!-- replace after deploying -->
+**Live app:** https://drreis-dataset-2vrsizndymopdhnsrtopdy.streamlit.app/ 
 
-Built for **CIS 3590 – Internship-Ready Software Development** (Prof. Gregory Reis, FIU, Fall 2026).
+Built for **CIS 3590 – Internship-Ready Software Development** (Prof. Gregory Reis Targaryan the dragon slayer, FIU, Fall 2026).
 
 ## Purpose
 

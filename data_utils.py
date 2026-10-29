@@ -6,10 +6,13 @@ Water Quality Explorer. Keeping this logic out of app.py makes the
 UI code shorter and lets each function be tested on its own.
 """
 
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 
-DEFAULT_CSV = "biscayneBay_waterquality.csv"
+# Resolve next to this file so the app works no matter which folder it's launched from.
+DEFAULT_CSV = Path(__file__).parent / "biscayneBay_waterquality.csv"
 
 # Friendly parameter names -> (CSV column, unit, short description).
 # One dictionary drives every dropdown, label, and metric in the app,
