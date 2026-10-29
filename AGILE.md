@@ -2,7 +2,7 @@
 
 This project was managed with a lightweight **Scrum-style** process: user stories in a prioritized backlog, short time-boxed sprints, a visible task board (GitHub Projects), small commits tied to stories, and a retrospective.
 
-> Board: https://github.com/FrLagoSoft/Dr.Reis-Dataset
+> Repository: https://github.com/FrLagoSoft/Dr.Reis-Dataset
 
 ## Product goal
 
@@ -17,7 +17,7 @@ Give a non-technical user (a student, resident, or environmental-agency staffer)
 
 Priority uses **MoSCoW** (Must / Should / Could). Points are relative effort (Fibonacci).
 
-| ID | User story | Priority | Pts | Sprint |
+| ID | User story | Priority | Pts | 
 |---|---|---|---|---|
 | US-1 | As a user, I want the app to load the water-quality dataset automatically so I can start exploring immediately. | Must | 2 | 1 |
 | US-2 | As a user, I want an overview with headline averages so I understand the data at a glance. | Must | 2 | 1 |
@@ -45,7 +45,7 @@ A story is done when:
 
 ## Retrospective
 
-**What went well:** Splitting the code into modules early made later features (map, insights) quick to add. Testing each story against the Definition of Done caught missing axis units before release.
+**What went well:** Splitting every single module addition between the lessons from Dr.Greg was beneficial towards the overall structure of this file. 
 
 **What didn't:** Putting the actual data file into the folders and translating that into the actual app data was a struggle. The first time I deployed the app itself, I realized that the data didn't even show at all. It was shocking and I had to trace back what the variables all fetched from my csv file, and try to edit those values. 
 
