@@ -17,7 +17,7 @@ Give a non-technical user (a student, resident, or environmental-agency staffer)
 
 Priority uses **MoSCoW** (Must / Should / Could). Points are relative effort (Fibonacci).
 
-| ID | User story | Priority | Pts | 
+| ID | User story | Priority | Pts | Sprint |
 |---|---|---|---|---|
 | US-1 | As a user, I want the app to load the water-quality dataset automatically so I can start exploring immediately. | Must | 2 | 1 |
 | US-2 | As a user, I want an overview with headline averages so I understand the data at a glance. | Must | 2 | 1 |
