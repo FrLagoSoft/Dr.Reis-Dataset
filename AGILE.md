@@ -2,7 +2,7 @@
 
 This project was managed with a lightweight **Scrum-style** process: user stories in a prioritized backlog, short time-boxed sprints, a visible task board (GitHub Projects), small commits tied to stories, and a retrospective.
 
-> Board: https://github.com/users/YOUR-USERNAME/projects/N  <!-- replace -->
+> Board: https://github.com/FrLagoSoft/Dr.Reis-Dataset
 
 ## Product goal
 
@@ -43,24 +43,10 @@ A story is done when:
 4. The change is committed with a message referencing the story (e.g. `US-6: add scatter plot`).
 5. The card is moved to **Done** on the board.
 
-## Sprints
-
-| Sprint | Goal | Stories |
-|---|---|---|
-| 1 | Minimum viable dashboard: data loads and one chart works | US-1 – US-4 |
-| 2 | Interactivity: filtering, comparison, and spatial view | US-5 – US-8 |
-| 3 | Polish, trust, and release | US-9 – US-13 |
-
-### Sprint review notes
-
-- **Sprint 1:** Discovered the `Time` column only stores minutes:seconds, and `Date m/d/y` has trailing spaces in its name. Built a proper `Timestamp` column in `data_utils.load_data()` before charting.
-- **Sprint 2:** Refactored the single script into `app.py`, `data_utils.py`, and `charts.py` so UI, data logic, and visuals are separated. A single `PARAMETERS` dictionary now drives every dropdown and axis label.
-- **Sprint 3:** The temperature-vs-oxygen correlation came out *positive* in this survey, the opposite of what physics predicts. Changed the Insights text to adapt to the actual result instead of hardcoding a conclusion. Added data-quality warnings for negative turbidity and chlorophyll readings.
-
 ## Retrospective
 
 **What went well:** Splitting the code into modules early made later features (map, insights) quick to add. Testing each story against the Definition of Done caught missing axis units before release.
 
-**What didn't:** I initially wrote an insight before checking the data, and it contradicted the actual numbers. Assumptions need to be verified against the dataset.
+**What didn't:** Putting the actual data file into the folders and translating that into the actual app data was a struggle. The first time I deployed the app itself, I realized that the data didn't even show at all. It was shocking and I had to trace back what the variables all fetched from my csv file, and try to edit those values. 
 
-**What I'll change for Project 2:** Write the acceptance criteria for each story *before* coding, and keep the board updated daily rather than at the end of each sprint.
+**What I'll change for Project 2:** Follow more closely through the class lectures, so that I don't have crises in general data structures like this. 
