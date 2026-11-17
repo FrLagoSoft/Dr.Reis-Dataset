@@ -56,9 +56,38 @@ pip install -r requirements.txt
 streamlit run app.py        # or: python -m streamlit run app.py
 ```
 
+## Flask Micro-API
+
+`api.py` is a small Flask API that serves the same dataset as JSON.
+
+| Method | Route | What it does | Status codes |
+|---|---|---|---|
+| GET | `/hello` | Welcome message | 200 |
+| GET | `/data?limit=5` | First *limit* readings (date, time, temp, salinity, pH, oxygen) plus any readings added with POST | 200, 400 |
+| POST | `/data` | Add a reading. JSON body needs `temperature_c` and `ph`, `note` is optional | 201, 400 |
+| any | anything else | JSON error | 404 |
+
+Run it:
+
+```bash
+pip install -r requirements.txt
+python api.py          # starts on http://127.0.0.1:5000
+python test_api.py     # in a second terminal, calls every route and prints the responses
+```
+
+Example POST body:
+
+```json
+{ "temperature_c": 24.5, "ph": 8.1, "note": "test reading" }
+```
+
+Screenshots of the Postman / test script output are in the `screenshots/` folder.
+
 ## Project structure
 
 ```
+├── api.py                         # Flask micro-API (/hello, /data)
+├── test_api.py                    # requests script that tests the API
 ├── app.py                         # Streamlit UI: sidebar, tabs, page layout
 ├── data_utils.py                  # Loading, cleaning, filtering, summaries
 ├── charts.py                      # Plotly figure builders

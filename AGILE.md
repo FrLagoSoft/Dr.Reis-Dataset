@@ -32,6 +32,10 @@ Priority uses **MoSCoW** (Must / Should / Could). Points are relative effort (Fi
 | US-11 | As a user, I want to upload my own CSV so I can reuse the dashboard for other surveys. | Could | 3 | 3 |
 | US-12 | As a user, I want to download filtered data so I can use it in my own analysis. | Could | 1 | 3 |
 | US-13 | As a user, I want a public URL so I can open the app without installing anything. | Must | 2 | 3 |
+| US-14 | As a developer, I want a `/hello` endpoint so I can check the API is running. | Must | 1 | 4 |
+| US-15 | As a developer, I want `GET /data` to return readings as JSON so other apps can use the dataset. | Must | 2 | 4 |
+| US-16 | As a developer, I want `POST /data` to accept a new reading and return 201 (or 400 if it's bad). | Must | 2 | 4 |
+| US-17 | As a developer, I want a test script that calls every route so I can prove the API works. | Must | 1 | 4 |
 
 ## Definition of Done
 
@@ -42,6 +46,12 @@ A story is done when:
 3. New functions have a docstring; non-obvious lines have comments.
 4. The change is committed with a message referencing the story (e.g. `US-6: add scatter plot`).
 5. The card is moved to **Done** on the board.
+
+## Sprint 4: Flask Micro-API
+
+**Goal:** expose the dataset through a small REST API with GET and POST, and test it with Postman and a requests script (US-14 to US-17).
+
+For the API, "done" also means every route returns JSON with the right HTTP status code, and `test_api.py` passes.
 
 ## Retrospective
 
